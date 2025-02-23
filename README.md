@@ -2,35 +2,35 @@
 
 # SkyGuardian Logic
 
-##Route Definition and Initialization
+## Route Definition and Initialization
 
 - The program defines multiple flight routes using geographic coordinates (e.g., coastal, central valley, eastern, hybrid). Each route is broken into segments represented by coordinate points.
 - A map is initialized using OpenLayers, displaying base layers with OpenStreetMap tiles. The active route and a flight marker (representing the aircraft) are drawn.
 
-##Flight Simulation Logic
+## Flight Simulation Logic
 
 - startFlightSimulation() triggers the flight by initializing the map, creating interactive route-switching buttons, and starting the animation.
 - The animateFlight() function smoothly moves the flight marker along the route by interpolating between points, updating the aircraft’s position, and keeping the map centered on the marker during flight.
 
-##Dynamic Rerouting System
+## Dynamic Rerouting System
 
 - addNoFlyZone() visually adds a no-fly zone on the map and immediately checks for route conflicts.
 - findAlternativeRoute() scans available routes to identify those that avoid the no-fly zone using the helper method routeIntersectsNoFlyZone(), which detects whether any segment intersects with restricted airspace.
 
-##Real-time Conflict Detection
+## Real-time Conflict Detection
 
 - The program uses geometric checks (isPointInCircle()) to determine if any part of the route enters a circular no-fly zone. If a conflict is found, it automatically suggests a safer alternative route.
 
-##User Interaction and Visualization
+## User Interaction and Visualization
 
 - Buttons for switching between routes are dynamically generated with distinct colors for clarity.
 - showAllRoutes() displays all potential flight paths simultaneously, allowing users to visually compare routes in relation to no-fly zones.
 
-##Safety-First Prioritization
+## Safety-First Prioritization
 
 - During the flight, the system continuously monitors route segments for conflicts, ensuring that the simulation dynamically adapts to changes in airspace restrictions in real time.
 
-##SkyGuradian Run Instructions
+## SkyGuradian Run Instructions
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 
