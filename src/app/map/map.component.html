@@ -1,0 +1,13 @@
+<div class="map-container">
+    <div class="header">
+      <img src="assets/SkyGuardian.png" alt="SkyGuardian Logo" class="logo">
+      <button (click)="startFlightSimulation()" class="start-btn" *ngIf="!isMapVisible">Start Flight</button>
+    </div>
+    
+    <div *ngIf="isMapVisible">
+      <div id="map-button-container"></div>
+      <div id="map"></div>
+      <button (click)="addNoFlyZone()" class="no-fly-btn">Add No-Fly Zone</button>
+    </div>
+</div>
+  

@@ -1,0 +1,51 @@
+.map-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+        .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+    
+        .start-btn {
+            background-color: #28a745;
+        }
+        }
+    
+        #map {
+        height: 600px;
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+    
+        button {
+        padding: 10px 20px;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    
+        &.start-btn:hover {
+            background-color: #218838;
+        }
+    
+        &.no-fly-btn {
+            background-color: #dc3545;
+            &:hover {
+            background-color: #c82333;
+            }
+        }
+    }
+}  
